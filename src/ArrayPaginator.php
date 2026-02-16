@@ -60,7 +60,7 @@ class ArrayPaginator extends AbstractPaginator
     {
         $resolver->setRequired('data');
         $resolver->setAllowedTypes('data', ['array', \ArrayIterator::class]);
-        $resolver->setNormalizer('data', function (Options $options, array|\ArrayIterator $value) {
+        $resolver->setNormalizer('data', static function (Options $options, array|\ArrayIterator $value) {
             if ($value instanceof \ArrayIterator) {
                 return $value->getArrayCopy();
             }
@@ -70,6 +70,6 @@ class ArrayPaginator extends AbstractPaginator
 
         $resolver->setDefault('count', null);
         $resolver->setAllowedTypes('count', ['int', 'null']);
-        $resolver->setAllowedValues('count', fn (?int $value) => null === $value || $value >= 0);
+        $resolver->setAllowedValues('count', static fn (?int $value) => null === $value || $value >= 0);
     }
 }

@@ -66,7 +66,7 @@ abstract class AbstractPaginator implements PaginatorInterface
             return $page;
         });
         $resolver->setAllowedTypes('max_per_page', 'int');
-        $resolver->setAllowedValues('max_per_page', fn (int $value) => $value > 0);
+        $resolver->setAllowedValues('max_per_page', static fn (int $value) => $value > 0);
         $this->configureOptions($resolver);
         /** @var TResolvedOptions $resolvedOptions */
         $resolvedOptions = $resolver->resolve($options);
