@@ -22,11 +22,16 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.88",
+        "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpunit/phpunit": "^10.0"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "extra": {
         "branch-alias": {
