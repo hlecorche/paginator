@@ -3,6 +3,3 @@ parameters:
         - # To be fixed in v2.0
             message: '#__construct\(\).+but should not return anything#'
             path: src/AbstractPaginator.php
-        -
-            message: '#no value type specified in iterable type array#'
-            path: tests/

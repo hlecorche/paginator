@@ -19,6 +19,8 @@ trait BuildArrayIteratorTrait
     protected static ?\ArrayIterator $defaultIterator = null;
 
     /**
+     * @param array<mixed> $data
+     *
      * @return \ArrayIterator<int|string, mixed>
      */
     protected static function createIterator(array $data): \ArrayIterator

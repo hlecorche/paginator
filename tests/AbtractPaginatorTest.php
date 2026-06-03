@@ -38,6 +38,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertFalse($paginator->pageExists());
     }
 
+    /**
+     * @return array<array{mixed, int}>
+     */
     public static function getTestBadPageOptionProvider(): array
     {
         return [
@@ -186,6 +189,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getFirstIndice());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, int}>
+     */
     public static function getTestGetFirstIndiceProvider(): array
     {
         return [
@@ -220,6 +226,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getLastIndice());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, int}>
+     */
     public static function getTestGetLastIndiceProvider(): array
     {
         return [
@@ -254,6 +263,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getFirstPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, int}>
+     */
     public static function getTestGetFirstPageProvider(): array
     {
         return [
@@ -288,6 +300,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getPreviousPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, ?int}>
+     */
     public static function getTestGetPreviousPageProvider(): array
     {
         return [
@@ -322,6 +337,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, int}>
+     */
     public static function getTestGetPageProvider(): array
     {
         return [
@@ -346,6 +364,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->pageExists());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, bool}>
+     */
     public static function getTestPageExistsProdiver(): array
     {
         return [
@@ -370,6 +391,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getNextPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, ?int}>
+     */
     public static function getTestGetNextPageProvider(): array
     {
         return [
@@ -404,6 +428,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->getLastPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, int}>
+     */
     public static function getTestGetLastPageProvider(): array
     {
         return [
@@ -438,6 +465,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->isFirstPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, bool}>
+     */
     public static function getTestIsFirstPageProvider(): array
     {
         return [
@@ -472,6 +502,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($expectedResult, $paginator->isLastPage());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>, bool}>
+     */
     public static function getTestIsLastPageProvider(): array
     {
         return [
@@ -514,6 +547,9 @@ class AbtractPaginatorTest extends TestCase
         $this->assertSame($iterator, $paginator->getIterator());
     }
 
+    /**
+     * @return array<array{mixed, int, \ArrayIterator<int|string, mixed>}>
+     */
     public static function getTestGetIteratorProvider(): array
     {
         return [
